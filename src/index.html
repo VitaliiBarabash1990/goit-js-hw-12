@@ -2,22 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>GoIT HW-12</title>
+		<link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
-
     <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
+      <div class="container-form-search">
+        <form class="form-search">
+          <input
+            type="text"
+            class="input-search"
+            placeholder="Search images..."
+            name="query"
+          />
+          <button type="submit" class="btn btn-search">Search</button>
+        </form>
+        <span class="loader" style="display: none"></span>
+        <div class="gallery"></div>
+        <button
+          type="button"
+          class="btn btn-load-more is-hidden"
+          data-action="load-more"
+        >
+          Load more
+        </button>
+        <span class="loader" style="display: none"></span>
+      </div>
     </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
 
     <script type="module" src="./main.js"></script>
   </body>
